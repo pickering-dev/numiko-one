@@ -2,7 +2,8 @@
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   font-family: "Inter", sans-serif;
 }
 
@@ -16,8 +17,21 @@ body {
   padding: 0;
 }
 
-* {
+section {
   transition: all 0.5s ease-in-out;
+}
+
+#loading-screen {
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(233deg, 47%, 7%);
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-size: 1.5em;
+  color: hsla(0deg, 0%, 100%, 0.75);
 }
 
 #card {
@@ -81,10 +95,20 @@ body {
   align-items: center;
   margin-top: 30px;
 }
+#card .card-wrapper .number-container .number-flex {
+  display: flex;
+}
+#card .card-wrapper .number-container .number-flex h5 {
+  padding-left: 0;
+  margin: 0;
+  font-size: 1.5em;
+  color: hsl(0deg, 0%, 100%);
+}
 #card .card-wrapper .number-container h4 {
+  font-size: 1.5em;
   color: hsl(0deg, 0%, 100%);
   margin: 0;
-  padding: 0 30px;
+  padding: 0 0 0 30px;
 }
 #card .card-wrapper .number-container p {
   margin-top: 10px;
