@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Inter", sans-serif;
+}
+
+p {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+body {
+  background-color: hsl(233deg, 47%, 7%);
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  transition: all 0.5s ease-in-out;
+}
+
+#card {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+#card .purple {
+  color: hsl(277deg, 64%, 61%);
+}
+#card .card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 80vw;
+  height: 490px;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0 auto;
+}
+#card .card-wrapper .text-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: hsl(244deg, 38%, 16%);
+  border-radius: 20px 0 0 20px;
+}
+#card .card-wrapper .text-container .body-content {
+  line-height: 25px;
+  max-width: 445px;
+}
+#card .card-wrapper .text-container .text-content {
+  padding: 0 35px;
+}
+#card .card-wrapper .text-container h1 {
+  color: hsl(0deg, 0%, 100%);
+  margin: 0;
+  padding: 30px 30px 0 30px;
+  font-size: 2.5em;
+}
+#card .card-wrapper .text-container p {
+  color: hsla(0deg, 0%, 100%, 0.75);
+  font-size: 15px;
+  padding: 0 30px 0 30px;
+}
+#card .card-wrapper .image-container {
+  height: 100%;
+  width: 45%;
+}
+#card .card-wrapper .image-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0 20px 20px 0;
+}
+#card .card-wrapper .number-container {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+#card .card-wrapper .number-container h4 {
+  color: hsl(0deg, 0%, 100%);
+  margin: 0;
+  padding: 0 30px;
+}
+#card .card-wrapper .number-container p {
+  margin-top: 10px;
+}/*# sourceMappingURL=style.css.map */
