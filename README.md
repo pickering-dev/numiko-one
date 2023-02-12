@@ -1,4 +1,4 @@
-Stats info card component (numiko test 1)
+<h1>Stats info card component (numiko test 1)</h1>
 
 <!-- Built With -->
 
