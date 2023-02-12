@@ -31,8 +31,31 @@ section {
 	justify-content: center;
 	align-items: center;
 	font-family: "Inter", sans-serif;
-	font-size: 1.5em;
+	font-size: 1rem;
 	color: hsla(0, 0%, 100%, 0.75);
+	transition: 0.5s ease-in-out all;
+}
+
+#loading-screen:after {
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: bottom;
+	-webkit-animation: ellipsis steps(4, end) 900ms infinite;
+	animation: ellipsis steps(4, end) 900ms infinite;
+	content: "\2026"; /* ascii code for the ellipsis character */
+	width: 0px;
+}
+
+@keyframes ellipsis {
+	to {
+		width: 1.25rem;
+	}
+}
+
+@-webkit-keyframes ellipsis {
+	to {
+		width: 1.25rem;
+	}
 }
 
 #card {
@@ -51,13 +74,25 @@ section {
 		width: 100vw;
 		overflow: hidden;
 		margin: 0 auto;
+		@media screen and (max-width: 1100px) {
+			flex-direction: column-reverse;
+			max-width: 100%;
+			height: 90%;
+		}
 		.text-container {
 			.body-content {
 				line-height: 25px;
 				max-width: 445px;
+				@media screen and (max-width: 1100px) {
+					margin: 0 auto;
+				}
 			}
 			.text-content {
 				padding: 0 35px;
+				@media screen and (max-width: 1100px) {
+					padding: 0;
+					text-align: center;
+				}
 			}
 			width: 50%;
 			height: 100%;
@@ -65,12 +100,20 @@ section {
 			justify-content: center;
 			flex-direction: column;
 			background-color: hsl(244, 38%, 16%);
-			border-radius: 20px 0 0 20px;
+			border-radius: 10px 0 0 10px;
+			@media screen and (max-width: 1100px) {
+				border-radius: 0 0 10px 10px;
+				width: 85%;
+			}
 			h1 {
 				color: hsl(0, 0%, 100%);
 				margin: 0;
 				padding: 30px 30px 0 30px;
-				font-size: 2.5em;
+				font-size: 2.5rem;
+				max-width: 445px;
+				@media screen and (max-width: 1100px) {
+					margin: 0 auto;
+				}
 			}
 
 			p {
@@ -83,34 +126,65 @@ section {
 		.image-container {
 			height: 100%;
 			width: 45%;
+			position: relative;
+			overflow: hidden;
+			border-radius: 0 10px 10px 0;
+			@media screen and (max-width: 1100px) {
+				border-radius: 10px 10px 0 0;
+				width: 85%;
+			}
 			img {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
-				border-radius: 0 20px 20px 0;
+				border-radius: 0 10px 10px 0;
+				@media screen and (max-width: 1100px) {
+					border-radius: 10px 10px 0 0;
+				}
+			}
+			&:after {
+				background-color: hsla(277, 64%, 61%, 50%);
+				content: "";
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
 			}
 		}
 		.number-container {
 			display: flex;
 			align-items: center;
 			margin-top: 30px;
+			@media screen and (max-width: 1100px) {
+				display: block;
+				text-align: center;
+				margin-bottom: 30px;
+			}
 			.number-flex {
 				display: flex;
+				@media screen and (max-width: 1100px) {
+					justify-content: center;
+				}
 				h5 {
 					padding-left: 0;
 					margin: 0;
-					font-size: 1.5em;
+					font-size: 1.5rem;
 					color: hsl(0, 0%, 100%);
 				}
 			}
 			h4 {
-				font-size: 1.5em;
+				font-size: 1.5rem;
 				color: hsl(0, 0%, 100%);
 				margin: 0;
 				padding: 0 0 0 30px;
+				@media screen and (max-width: 1100px) {
+					padding: 0;
+				}
 			}
 			p {
 				margin-top: 10px;
+				text-transform: uppercase;
 			}
 		}
 	}

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
 h1,
 h2,
@@ -30,10 +31,25 @@ section {
   justify-content: center;
   align-items: center;
   font-family: "Inter", sans-serif;
-  font-size: 1.5em;
+  font-size: 1rem;
   color: hsla(0deg, 0%, 100%, 0.75);
+  transition: 0.5s ease-in-out all;
 }
 
+#loading-screen:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  animation: ellipsis steps(4, end) 900ms infinite;
+  content: "…"; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1.25rem;
+  }
+}
 #card {
   height: 100vh;
   display: flex;
@@ -52,6 +68,13 @@ section {
   overflow: hidden;
   margin: 0 auto;
 }
+@media screen and (max-width: 1100px) {
+  #card .card-wrapper {
+    flex-direction: column-reverse;
+    max-width: 100%;
+    height: 90%;
+  }
+}
 #card .card-wrapper .text-container {
   width: 50%;
   height: 100%;
@@ -59,20 +82,43 @@ section {
   justify-content: center;
   flex-direction: column;
   background-color: hsl(244deg, 38%, 16%);
-  border-radius: 20px 0 0 20px;
+  border-radius: 10px 0 0 10px;
 }
 #card .card-wrapper .text-container .body-content {
   line-height: 25px;
   max-width: 445px;
 }
+@media screen and (max-width: 1100px) {
+  #card .card-wrapper .text-container .body-content {
+    margin: 0 auto;
+  }
+}
 #card .card-wrapper .text-container .text-content {
   padding: 0 35px;
+}
+@media screen and (max-width: 1100px) {
+  #card .card-wrapper .text-container .text-content {
+    padding: 0;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #card .card-wrapper .text-container {
+    border-radius: 0 0 10px 10px;
+    width: 85%;
+  }
 }
 #card .card-wrapper .text-container h1 {
   color: hsl(0deg, 0%, 100%);
   margin: 0;
   padding: 30px 30px 0 30px;
-  font-size: 2.5em;
+  font-size: 2.5rem;
+  max-width: 445px;
+}
+@media screen and (max-width: 1100px) {
+  #card .card-wrapper .text-container h1 {
+    margin: 0 auto;
+  }
 }
 #card .card-wrapper .text-container p {
   color: hsla(0deg, 0%, 100%, 0.75);
@@ -82,34 +128,75 @@ section {
 #card .card-wrapper .image-container {
   height: 100%;
   width: 45%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 10px 10px 0;
+}
+@media screen and (max-width: 1100px) {
+  #card .card-wrapper .image-container {
+    border-radius: 10px 10px 0 0;
+    width: 85%;
+  }
 }
 #card .card-wrapper .image-container img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 0 20px 20px 0;
+  border-radius: 0 10px 10px 0;
+}
+@media screen and (max-width: 1100px) {
+  #card .card-wrapper .image-container img {
+    border-radius: 10px 10px 0 0;
+  }
+}
+#card .card-wrapper .image-container:after {
+  background-color: hsla(277deg, 64%, 61%, 0.5);
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #card .card-wrapper .number-container {
   display: flex;
   align-items: center;
   margin-top: 30px;
 }
+@media screen and (max-width: 1100px) {
+  #card .card-wrapper .number-container {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
 #card .card-wrapper .number-container .number-flex {
   display: flex;
+}
+@media screen and (max-width: 1100px) {
+  #card .card-wrapper .number-container .number-flex {
+    justify-content: center;
+  }
 }
 #card .card-wrapper .number-container .number-flex h5 {
   padding-left: 0;
   margin: 0;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   color: hsl(0deg, 0%, 100%);
 }
 #card .card-wrapper .number-container h4 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   color: hsl(0deg, 0%, 100%);
   margin: 0;
   padding: 0 0 0 30px;
 }
+@media screen and (max-width: 1100px) {
+  #card .card-wrapper .number-container h4 {
+    padding: 0;
+  }
+}
 #card .card-wrapper .number-container p {
   margin-top: 10px;
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */

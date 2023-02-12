@@ -5,16 +5,19 @@ const duration = 2000; // animation duration in milliseconds
 // Step 1: Create a loading screen element
 const loadingScreen = document.createElement("div");
 loadingScreen.id = "loading-screen";
-loadingScreen.textContent = "Loading...";
+loadingScreen.textContent = "Loading";
 document.body.appendChild(loadingScreen);
 
 // Step 2: Show the loading screen
 loadingScreen.style.display = "flex";
+loadingScreen.style.opacity = 1;
+loadingScreen.style.visibility = "visible";
 
 // Step 3: Delay the start of the number animation by 3 seconds
 setTimeout(function () {
 	// Step 4: Hide the loading screen
-	loadingScreen.style.display = "none";
+	loadingScreen.style.opacity = 0;
+	loadingScreen.style.visibility = "hidden";
 
 	// Step 5: Start the number animation
 	function animateNumbers() {
