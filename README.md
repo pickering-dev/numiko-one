@@ -2,9 +2,9 @@
 
 <h2> Built With: </h2>
 
-[html]: https://developer.mozilla.org/en-US/docs/Web/HTML
-[sass]: https://sass-lang.com/
-[javascript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+- html: https://developer.mozilla.org/en-US/docs/Web/HTML
+- sass: https://sass-lang.com/
+- javascript: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
 <h2> Getting Started </h2>
 
