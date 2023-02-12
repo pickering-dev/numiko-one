@@ -10,7 +10,7 @@
 
 Download the project from https://github.com/pickering-dev/numiko-one and open the index.html file in your browser.
 
-<!-- Features -->
+<h2> Features </h2>
 
 - Loading screen
 - Responsive, animated design
